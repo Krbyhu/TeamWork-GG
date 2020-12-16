@@ -21,5 +21,5 @@ $ ng serve
 ```
 9. Abrir navegador e ingresar a la dirección:
 ```sh
-$ localhost:4200
+$ http://localhost:4200
 ```

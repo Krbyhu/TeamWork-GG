@@ -1,5 +1,5 @@
 ### Instalación
-Se recomienda utilizar VSCode.
+Se recomienda utilizar VSCode, además de tener la última versión de npm y Angular CLI.
 
 1. Abrir terminal en la carpeta base 'TeamWork GG'
 2. Utilizar comando:

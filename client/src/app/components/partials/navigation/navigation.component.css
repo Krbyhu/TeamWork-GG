@@ -1,0 +1,92 @@
+#header {
+    transition: all 0.5s;
+    z-index: 997;
+    padding: 15px 0;
+    width: 100vw;
+  }
+  
+  #header.header-scrolled, #header.header-inner-pages {
+    background: rgb(27, 28, 29);
+  }
+  
+  #header .logo {
+    font-size: 30px;
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    font-weight: 500;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+  
+  #header .logo a {
+    color: #fff;
+  }
+  
+  #header .logo img {
+    max-height: 40px;
+  }
+
+
+.btn-success {
+    font-family: "Jost", sans-serif;
+    font-weight: 500;
+    background-color: rgb(226, 93, 15);
+    border-color: rgb(226, 93, 15);
+    border-radius: 50px;
+}
+
+.btn-success:hover, .btn-success:active, .btn-success:focus {
+    background-color: rgb(255, 94, 0) !important;
+    border-color: rgb(255, 255, 255) !important;
+    border-radius: 50px !important;
+    box-shadow: none !important;
+}
+
+.btn-outline-success {
+    font-family: "Jost", sans-serif;
+    font-weight: 500;
+    border-color: rgb(153, 153, 153);
+    color: white;
+    border-radius: 50px;
+}
+
+.btn-outline-success:hover, .btn-outline-success:active, .btn-outline-success:focus {
+    background-color: transparent !important;
+    border-color: rgb(255, 253, 253) !important;
+    color: white !important;
+    border-radius: 50px !important;
+    box-shadow: none !important;
+}
+
+img {
+    transition: all 0.5s ease-in-out;
+  }
+img:hover  {
+    transform: scale(1.1,1.1);
+}
+
+.nav-link {
+  color: #ffffff;
+}
+
+.nav-link:hover {
+  color: #747474;
+  text-decoration: none;
+}
+
+.btn-secondary {
+  background-color: #55545400 !important;
+  border-color: #55545400 !important;
+}
+
+.imageprof{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    border: 1px solid #000;
+}
+
+.imageprof:hover{
+  transform: none;
+}

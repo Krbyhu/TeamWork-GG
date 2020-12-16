@@ -1,0 +1,105 @@
+<app-navigation></app-navigation>
+<html>
+<body>
+  <div class="container">
+      <div class="main-body">
+            <div class="row gutters-sm">
+              <div class="col-md-4 mb-3">
+                <div class="card">
+                  <div class="card-body">
+                    <div class="d-flex flex-column align-items-center text-center">
+                      <!-- <img src="https://www.searchpng.com/wp-content/uploads/2019/02/Profile-ICon.png" alt="Admin" class="rounded-circle" width="150">
+                      <div class="hover-text">Cambiar imagen</div>
+                      <div class="background"></div> -->
+                      <label class="hoverable" for="fileInput">
+                          <img [src]="url ? url : 'https://www.w3schools.com/howto/img_avatar.png'"> 
+                          <div class="hover-text">Cambiar imagen</div>
+                          <div class="background"></div>
+                      </label>
+                      <input id="fileInput" type='file' (change)="onSelectFile($event)">
+                      <div class="mt-3">
+                        <div class="form-group">
+                          <input type="text" [(ngModel)]="user.nombre_usuario" class="form-control" id="nombre_usuario" placeholder="Username" autocomplete="off" required>
+                        </div>
+                        <div class="form-group">
+                          <input type="email" [(ngModel)]="user.correo" class="form-control" id="email" placeholder="correo@correo.com" autocomplete="off" required>
+                        </div>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <button [routerLink]='["/profile", id]' type="button" class="btn btn-success-outline">Cancelar</button>
+                        <button (click)="updateProfile()" type="button" class="btn btn-success">Actualizar</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- <div class="card mt-3">
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
+                      <h6 class="mb-0"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-twitter mr-2 icon-inline text-info"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg>Twitter</h6>
+                      <div class="form-group">
+                        <input type="text" [(ngModel)]="socialNet.twitter" class="form-control" id="twitter" placeholder="Twitter" autocomplete="off" required>
+                      </div>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
+                      <h6 class="mb-0"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-instagram mr-2 icon-inline text-danger"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>Instagram</h6>
+                      <div class="form-group">
+                        <input type="text" [(ngModel)]="socialNet.insta" class="form-control" id="instagram" placeholder="Instagram" autocomplete="off" required>
+                      </div>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
+                      <h6 class="mb-0"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-facebook mr-2 icon-inline text-primary"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>Facebook</h6>
+                      <div class="form-group">
+                        <input type="text" [(ngModel)]="socialNet.facebook" class="form-control" id="facebook" placeholder="Facebook" autocomplete="off" required>
+                      </div>
+                    </li>
+                  </ul>
+                </div> -->
+              </div>
+              <div class="col-md-8">
+                <div class="card mb-3">
+                  <div class="card-body">
+                    <div class="mt-3">
+                      <h4 align="center">Descripción</h4>
+                      <div class="form-group">
+                        <textarea [(ngModel)]="profile.descripcion" name="description" style="resize: none; box-sizing: border-box;"></textarea>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                  <div class="card mb-3">
+                    <div class="card-body">
+                      <div class="mt-3">
+                        <h4 align="center">Redes sociales</h4>
+                        <div class="card mt-3">
+                          <ul class="list-group list-group-flush">
+                            <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
+                              <h6 class="mb-0"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-twitter mr-2 icon-inline text-info"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg>Twitter</h6>
+                              <div class="form-group">
+                                <input type="text" [(ngModel)]="socialNet.twitter" class="form-control" id="twitter" placeholder="Twitter" autocomplete="off" required>
+                              </div>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
+                              <h6 class="mb-0"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-instagram mr-2 icon-inline text-danger"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>Instagram</h6>
+                              <div class="form-group">
+                                <input type="text" [(ngModel)]="socialNet.insta" class="form-control" id="instagram" placeholder="Instagram" autocomplete="off" required>
+                              </div>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
+                              <h6 class="mb-0"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-facebook mr-2 icon-inline text-primary"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>Facebook</h6>
+                              <div class="form-group">
+                                <input type="text" [(ngModel)]="socialNet.facebook" class="form-control" id="facebook" placeholder="Facebook" autocomplete="off" required>
+                              </div>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+      </div>
+  </body>
+</html>

@@ -1,0 +1,28 @@
+<app-navigation></app-navigation>
+<body>
+    <section class="main-content920" >
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9">
+                <div class="ask-question-input-part032">
+                      <h4>Nuevo Post</h4>
+                    <hr>
+                    <form>
+                        <div class="question-title39">
+                            <span class="form-description433" style="color: black;">Título </span><input type="text" name="titulo" [(ngModel)]="forum.titulo" class="question-ttile32" placeholder="Título" autocomplete="off">
+                        <div class="details2-239">
+                            <div class="col-md-12 nopadding">
+                                <textarea id="txtEditor" style="resize: none;" [(ngModel)]="forum.cuerpo" name="cuerpo"></textarea> 
+                            </div>
+                        </div>
+                        </div>	
+                    </form>
+                    <div class="publish-button2389">
+                        <button (click)="newPost()" type="button" class="publis1291">Publicar post</button>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+    </section>
+</body>

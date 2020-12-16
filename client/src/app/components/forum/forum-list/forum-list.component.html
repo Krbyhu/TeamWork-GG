@@ -1,0 +1,37 @@
+<app-navigation></app-navigation>
+<body>
+    <section>
+        <div class="container">
+            <a routerLink="new" type="button" class="btn btn-success">Nuevo post</a>
+            <div class="row">
+                <div class="col-md-9">
+                    <div id="main">
+                        <section>
+                            <div class="question-type2033" *ngFor="let post of posts">
+                                <div class="row">
+                                    <div class="col-md-1">
+                                        <div class="left-user12923 left-user12923-repeat">
+                                            <a href="#"><img src="{{post.img}}" alt="image"> </a> <a href="#"></a> 
+                                            {{post.nombre_usuario}}
+                                        </div>
+                                    </div>
+                                    <div class="col-md-9">
+                                        <div class="right-description893">
+                                            <div id="que-hedder2983">
+                                                <h3><a href="">{{post.titulo}}</a></h3> </div>
+                                            <div class="ques-details10018">
+                                                <p>{{post.cuerpo}}</p>
+                                            </div>
+                                            <hr>
+                                            <div class="ques-icon-info3293"><a href="#"><i class="fa fa-bug" aria-hidden="true"> Report</i></a> </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
